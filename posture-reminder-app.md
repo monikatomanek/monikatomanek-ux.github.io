@@ -31,8 +31,6 @@ Many people spend long periods at a computer or phone and forget to maintain goo
 
 ![app](main.png)
 
-*(placeholder for future Figma visuals)*
-
 ---
 
 ## Prototype Comparison
