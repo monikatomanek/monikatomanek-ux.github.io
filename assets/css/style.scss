@@ -220,18 +220,18 @@ section img {
 
 .mouse-glow {
   position: fixed;
-  width: 420px;
-  height: 420px;
+  width: 333px;
+  height: 333px;
   pointer-events: none;
   border-radius: 50%;
   z-index: 0;
 
   background: radial-gradient(
     circle,
-    rgba(167,139,250,.35) 0%,
-    rgba(96,165,250,.25) 35%,
-    rgba(244,114,182,.18) 60%,
-    transparent 75%
+    rgba(255, 245, 180, .55) 0%,     /* pastel yellow centre */
+    rgba(200, 255, 210, .45) 30%,    /* light green */
+    rgba(180, 230, 255, .25) 55%,    /* soft blue edge */
+    transparent 85%
   );
 
   filter: blur(45px);
