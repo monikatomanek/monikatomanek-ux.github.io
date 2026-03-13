@@ -6,7 +6,7 @@ I design apps, create educational materials, and explore ways technology can be 
 
 ## Projects
 
-### IBM Sustainability AI App
+### ### [IBM Sustainability AI App](ibm-ai-app)
 AI-driven sustainability concept focused on creating meaningful and intuitive environmental insights for users.
 
 ### Posture Reminder Desktop App
