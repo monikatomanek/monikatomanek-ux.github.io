@@ -60,9 +60,13 @@ html::after {
 }
 
 /* animations */
-@keyframes floatParticles {
-  from { transform: translateY(0); }
-  to { transform: translateY(-140px); }
+@keyframes particleDrift {
+  from {
+    background-position: 0 0, 50px 80px, 120px 40px, 200px 100px, 300px 50px;
+  }
+  to {
+    background-position: 0 -400px, 50px -300px, 120px -350px, 200px -280px, 300px -420px;
+  }
 }
 
 @keyframes glowDrift {
