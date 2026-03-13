@@ -102,13 +102,13 @@ h3 a:hover {
   background: linear-gradient(135deg, #fbeaff, #edf8ff);
 }
 
-/* full-width banner image */
+/* banner image */
 img[alt="UX Portfolio Banner"] {
   display: block;
-  width: calc(100% + 56px);
-  max-width: calc(100% + 56px);
-  margin: -28px -28px 28px -28px;
-  border-radius: 20px 20px 0 0;
+  width: 50%;
+  max-width: 50%;
+  margin: 0 auto 28px auto;
+  border-radius: 20px;
   box-shadow:
     0 18px 40px rgba(60,50,90,.18),
     0 0 22px rgba(190,160,255,.30),
@@ -166,9 +166,9 @@ section img:not([alt="UX Portfolio Banner"]) {
   }
 
   img[alt="UX Portfolio Banner"] {
-    width: calc(100% + 44px);
-    max-width: calc(100% + 44px);
-    margin: -24px -22px 24px -22px;
-    border-radius: 20px 20px 0 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 24px 0;
+    border-radius: 20px;
   }
 }
