@@ -11,9 +11,28 @@ body {
     radial-gradient(circle at 60% 80%, rgba(215,255,223,0.25), transparent 30%),
     linear-gradient(180deg, #fcfbff, #f7fbff);
   color: #2f2a3b;
+  overflow-x: hidden;
 }
 
-/* floating particles */
+/* soft moving glow */
+body::before {
+  content: "";
+  position: fixed;
+  top: -120px;
+  left: -10%;
+  width: 140%;
+  height: 320px;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 214, 243, 0.22), transparent 20%),
+    radial-gradient(circle at 50% 30%, rgba(191, 231, 255, 0.22), transparent 22%),
+    radial-gradient(circle at 80% 45%, rgba(215, 255, 223, 0.18), transparent 20%);
+  filter: blur(18px);
+  animation: glowDrift 12s ease-in-out infinite alternate;
+}
+
+/* subtle floating particles */
 body::after {
   content: "";
   position: fixed;
@@ -27,7 +46,7 @@ body::after {
     radial-gradient(2px 2px at 80% 60%, rgba(255,255,255,.9), transparent),
     radial-gradient(2px 2px at 30% 80%, rgba(255,255,255,.7), transparent);
   animation: floatParticles 18s linear infinite;
-  opacity: .6;
+  opacity: .45;
 }
 
 @keyframes floatParticles {
@@ -35,26 +54,40 @@ body::after {
   to { transform: translateY(-120px); }
 }
 
-/* keep content above particles */
-.wrapper,
+@keyframes glowDrift {
+  from { transform: translateX(-2%) translateY(0); }
+  to { transform: translateX(2%) translateY(18px); }
+}
+
+/* layout */
+.wrapper {
+  width: min(1400px, 96vw);
+  max-width: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
 header,
 section {
   position: relative;
   z-index: 1;
+  margin-top: 22px;
+  box-sizing: border-box;
 }
 
-/* full-width layout */
-.wrapper {
-  width: min(1400px, 96vw);
-  max-width: none;
-}
-
+/* left card */
 header {
   width: 280px;
+  min-width: 280px;
+  float: none;
 }
 
+/* right card */
 section {
-  width: calc(100% - 320px);
+  width: 0;
+  flex: 1;
+  float: none;
 }
 
 /* glass cards */
@@ -65,9 +98,19 @@ section {
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
   padding: 28px;
-  box-shadow: 0 14px 30px rgba(80,70,120,.12);
+  box-shadow:
+    0 14px 30px rgba(80,70,120,.12),
+    0 0 24px rgba(190,160,255,.08);
   border: 1px solid rgba(150,150,200,.15);
-  margin-top: 22px;
+}
+
+/* subtle pulse on cards */
+header:hover,
+section:hover {
+  box-shadow:
+    0 18px 36px rgba(80,70,120,.14),
+    0 0 34px rgba(190,160,255,.14);
+  transition: box-shadow .25s ease;
 }
 
 /* typography */
@@ -85,7 +128,7 @@ h2 {
   padding-bottom: 8px;
 }
 
-/* homepage project cards */
+/* project cards */
 h3 a {
   display: block;
   padding: 14px 16px;
@@ -98,51 +141,14 @@ h3 a {
 
 h3 a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(110,90,160,.18);
+  box-shadow:
+    0 10px 20px rgba(110,90,160,.18),
+    0 0 26px rgba(170,200,255,.16);
   background: linear-gradient(135deg, #fbeaff, #edf8ff);
 }
 
-/* banner image */
-img[alt="UX Portfolio Banner"] {
-  display: block;
-  width: 50%;
-  max-width: 50%;
-  margin: 0 auto 28px auto;
-  border-radius: 20px;
-  box-shadow:
-    0 18px 40px rgba(60,50,90,.18),
-    0 0 22px rgba(190,160,255,.30),
-    0 0 60px rgba(160,210,255,.18);
-  animation: bannerPulse 5s ease-in-out infinite alternate;
-  transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
-}
-
-img[alt="UX Portfolio Banner"]:hover {
-  transform: scale(1.015);
-  box-shadow:
-    0 22px 50px rgba(60,50,90,.22),
-    0 0 36px rgba(190,160,255,.48),
-    0 0 90px rgba(140,200,255,.32);
-  filter: saturate(1.04) brightness(1.02);
-}
-
-@keyframes bannerPulse {
-  from {
-    box-shadow:
-      0 18px 40px rgba(60,50,90,.18),
-      0 0 18px rgba(190,160,255,.22),
-      0 0 40px rgba(160,210,255,.14);
-  }
-  to {
-    box-shadow:
-      0 22px 46px rgba(60,50,90,.22),
-      0 0 34px rgba(190,160,255,.42),
-      0 0 80px rgba(160,210,255,.26);
-  }
-}
-
-/* normal images on project pages */
-section img:not([alt="UX Portfolio Banner"]) {
+/* normal images */
+section img {
   width: 100%;
   max-width: 100%;
   border-radius: 18px;
@@ -154,21 +160,15 @@ section img:not([alt="UX Portfolio Banner"]) {
 @media screen and (max-width: 960px) {
   .wrapper {
     width: min(96vw, 760px);
+    display: block;
   }
 
   header,
   section {
     width: 100%;
-    float: none;
+    min-width: 0;
     margin-top: 18px;
     padding: 24px 22px;
-    border-radius: 20px;
-  }
-
-  img[alt="UX Portfolio Banner"] {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 24px 0;
     border-radius: 20px;
   }
 }
