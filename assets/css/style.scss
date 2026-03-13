@@ -13,55 +13,66 @@ body {
     radial-gradient(circle at 70% 40%, rgba(96,165,250,0.18), transparent 12%),
     radial-gradient(circle at 50% 25%, rgba(244,114,182,0.16), transparent 10%),
     linear-gradient(135deg, #f4efff, #eef7ff, #fdf4ff);
-  background-size: 120% 120%;
-  animation: backgroundFlow 14s ease-in-out infinite alternate;
   color: #2f2a3b;
   overflow-x: hidden;
 }
 
-/* soft moving glow */
-body::before {
+/* visible moving glow layer */
+html::before {
   content: "";
   position: fixed;
-  top: -120px;
-  left: -10%;
-  width: 140%;
-  height: 320px;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(255, 214, 243, 0.22), transparent 20%),
-    radial-gradient(circle at 50% 30%, rgba(191, 231, 255, 0.22), transparent 22%),
-    radial-gradient(circle at 80% 45%, rgba(215, 255, 223, 0.18), transparent 20%);
+    radial-gradient(circle at 18% 22%, rgba(244,114,182,0.18), transparent 16%),
+    radial-gradient(circle at 78% 18%, rgba(96,165,250,0.18), transparent 18%),
+    radial-gradient(circle at 60% 78%, rgba(45,212,191,0.14), transparent 16%);
   filter: blur(18px);
-  animation: glowDrift 12s ease-in-out infinite alternate;
+  animation: glowDrift 10s ease-in-out infinite alternate;
+  opacity: 1;
 }
 
-/* subtle floating particles */
-body::after {
+/* visible floating particles */
+html::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
   background-image:
-    radial-gradient(4px 4px at 20% 30%, rgba(167, 139, 250, .75), transparent),
-    radial-gradient(4px 4px at 40% 70%, rgba(96, 165, 250, .75), transparent),
-    radial-gradient(4px 4px at 60% 40%, rgba(244, 114, 182, .7), transparent),
-    radial-gradient(4px 4px at 80% 60%, rgba(45, 212, 191, .7), transparent),
-    radial-gradient(4px 4px at 30% 80%, rgba(251, 191, 36, .65), transparent);
-  animation: floatParticles 18s linear infinite;
+    radial-gradient(5px 5px at 12% 22%, rgba(167,139,250,.85), transparent),
+    radial-gradient(5px 5px at 24% 68%, rgba(96,165,250,.85), transparent),
+    radial-gradient(5px 5px at 42% 36%, rgba(244,114,182,.82), transparent),
+    radial-gradient(5px 5px at 61% 58%, rgba(45,212,191,.82), transparent),
+    radial-gradient(5px 5px at 76% 26%, rgba(251,191,36,.78), transparent),
+    radial-gradient(5px 5px at 88% 72%, rgba(167,139,250,.80), transparent);
+  animation: floatParticles 12s linear infinite;
   opacity: .9;
 }
 
+/* animations */
 @keyframes floatParticles {
   from { transform: translateY(0); }
-  to { transform: translateY(-120px); }
+  to { transform: translateY(-140px); }
 }
 
 @keyframes glowDrift {
   from { transform: translateX(-2%) translateY(0); }
-  to { transform: translateX(2%) translateY(18px); }
+  to { transform: translateX(2%) translateY(16px); }
+}
+
+@keyframes softPulse {
+  from {
+    box-shadow:
+      0 14px 30px rgba(80,70,120,.12),
+      0 0 12px rgba(200,180,255,.10);
+  }
+  to {
+    box-shadow:
+      0 18px 40px rgba(80,70,120,.16),
+      0 0 26px rgba(200,180,255,.20);
+  }
 }
 
 /* layout */
@@ -71,6 +82,8 @@ body::after {
   display: flex;
   align-items: flex-start;
   gap: 28px;
+  position: relative;
+  z-index: 1;
 }
 
 header,
@@ -86,6 +99,7 @@ header {
   width: 280px;
   min-width: 280px;
   float: none;
+  animation: softPulse 10s ease-in-out infinite alternate;
 }
 
 /* right card */
@@ -98,7 +112,7 @@ section {
 /* glass cards */
 header,
 section {
-  background: rgba(255,255,255,.78);
+  background: rgba(255,255,255,.82);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
@@ -109,7 +123,7 @@ section {
   border: 1px solid rgba(150,150,200,.15);
 }
 
-/* subtle pulse on cards */
+/* subtle hover pulse on cards */
 header:hover,
 section:hover {
   box-shadow:
@@ -175,31 +189,5 @@ section img {
     margin-top: 18px;
     padding: 24px 22px;
     border-radius: 20px;
-  }
-}
-
-header {
-  animation: softPulse 10s ease-in-out infinite alternate;
-}
-
-@keyframes softPulse {
-  from {
-    box-shadow:
-      0 14px 30px rgba(80,70,120,.12),
-      0 0 12px rgba(200,180,255,.10);
-  }
-  to {
-    box-shadow:
-      0 18px 40px rgba(80,70,120,.16),
-      0 0 26px rgba(200,180,255,.20);
-  }
-}
-
-@keyframes backgroundFlow {
-  from {
-    background-position: 0% 0%;
-  }
-  to {
-    background-position: 100% 100%;
   }
 }
