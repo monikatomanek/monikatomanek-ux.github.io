@@ -12,9 +12,10 @@
 
 Alongside my university studies, I write practical learning resources about UX and interface design.
 
-Many UX books either focus heavily on theory or show polished designs without explaining how the thinking process works. My goal was to create clear, practical guides that explain **how UX design actually happens in real projects**, from early research to prototyping and evaluation.
+Many UX books either focus heavily on theory or show polished designs without explaining how the thinking process works. 
+My goal was to create clear, practical guides that explain how UX design happens in real projects, from early research to prototyping and evaluation.
 
-Both books focus on **learning by doing**, using examples, exercises, and realistic scenarios rather than abstract terminology.
+Both books focus on learning by doing, using examples, exercises, and realistic scenarios rather than abstract terminology.
 
 ---
 
