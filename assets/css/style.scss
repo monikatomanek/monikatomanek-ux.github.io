@@ -42,30 +42,40 @@ html::after {
   z-index: 0;
 
   background-image:
-    radial-gradient(circle, rgba(167,139,250,.9) 2px, transparent 3px),
-    radial-gradient(circle, rgba(96,165,250,.9) 2px, transparent 3px),
-    radial-gradient(circle, rgba(244,114,182,.9) 2px, transparent 3px),
-    radial-gradient(circle, rgba(45,212,191,.9) 2px, transparent 3px),
-    radial-gradient(circle, rgba(251,191,36,.9) 2px, transparent 3px);
+    radial-gradient(circle, rgba(255,255,255,.55) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,.45) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,.40) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,.35) 2px, transparent 3px);
 
   background-size:
     180px 180px,
-    220px 220px,
-    260px 260px,
+    240px 240px,
     300px 300px,
-    340px 340px;
+    360px 360px;
 
-  animation: particleDrift 25s linear infinite;
-  opacity: .8;
+  animation:
+    particleDrift 28s linear infinite,
+    particleShimmer 6s ease-in-out infinite alternate;
+
+  opacity: .55;
 }
 
 /* animations */
 @keyframes particleDrift {
   from {
-    background-position: 0 0, 50px 80px, 120px 40px, 200px 100px, 300px 50px;
+    background-position: 0 0, 50px 80px, 120px 40px, 200px 100px;
   }
   to {
-    background-position: 0 -400px, 50px -300px, 120px -350px, 200px -280px, 300px -420px;
+    background-position: 0 -400px, 50px -300px, 120px -350px, 200px -280px;
+  }
+}
+
+@keyframes particleShimmer {
+  from {
+    filter: brightness(0.9) blur(.2px);
+  }
+  to {
+    filter: brightness(1.2) blur(.5px);
   }
 }
 
