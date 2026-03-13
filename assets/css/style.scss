@@ -229,12 +229,12 @@ section img {
   background: radial-gradient(
     circle,
     rgba(255,245,180,.75) 0%,     /* pastel yellow centre */
-    rgba(200, 255, 210, .45) 33%,    /* light green */
-    rgba(180, 230, 255, .25) 55%,    /* soft blue edge */
+    rgba(200, 255, 210, .45) 22%,    /* light green */
+    rgba(180, 230, 255, .25) 44%,    /* soft blue edge */
     transparent 75%
   );
 
   filter: blur(45px);
-  transform: translate(-50%, -50%);
+  transform: translate(-35%, -35%);
   transition: transform .05s linear;
 }
