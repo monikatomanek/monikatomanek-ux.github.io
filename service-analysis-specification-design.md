@@ -1,16 +1,32 @@
-# Service Analysis & Specification Design
+# Service Design Micro-Internship
 
-## Problem
-The existing service specification no longer reflected how the service currently operates after changes in health and social care, rising demand, and evolving organisational needs.
+**Role:** UX & Service Design Intern  
 
-## Goal
-Contribute to an updated service specification that accurately reflects the current service, supports future commissioning and contract opportunities, and is clear and easy for stakeholders to understand.
+**Tools:** Documentation, Stakeholder Interviews, Service Specification Templates  
 
-## UX Focus
-- User and stakeholder interviews
-- Gathering and analysing service information
-- Improving clarity, structure, and usability of documentation
-- Making complex service information easier to understand and update
+**Outcome:** Contributing to updated service specification  
 
-## Outcome
-A professionally updated service specification designed to improve consistency, transparency, and alignment with the current service model.
+---
+
+## Planned activities
+
+- Review existing service specification and gather staff input
+- Conduct stakeholder interviews and collect feedback
+- Produce an updated, clear, and digestible service specification
+- Collaborate with the supervisor and staff to ensure alignment
+
+---
+
+## Status
+
+**Upcoming**
+
+Screenshots, drafts, and reflections will be added once the project is completed.
+
+---
+
+## Expected Learnings
+
+- Gain experience in service design documentation and stakeholder engagement
+- Improve professional writing for UX/service projects
+- Understand how UX principles map onto organisational services
