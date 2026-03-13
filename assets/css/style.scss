@@ -190,3 +190,15 @@ img {
     font-size: 26px;
   }
 }
+
+/* analytical section */
+h2:contains("Analytical UX") + h3 a {
+  background: linear-gradient(135deg,#e8f2ff,#f2f7ff);
+  border: 1px solid #c8d8f0;
+}
+
+/* creative section */
+h2:contains("Creative UX") + h3 a {
+  background: linear-gradient(135deg,#ffe8f3,#fff3d8);
+  border: 1px solid #f1c7dc;
+}
