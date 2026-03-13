@@ -1,4 +1,7 @@
-
+---
+layout: default
+title: ""
+---
 I’m a UX and Interaction Design student, building hands-on experience through projects that combine logic, structure, and creativity. 
 I design apps, create educational materials, and explore ways technology can be both intuitive and meaningful.  I focus on creating experiences that help users engage, streamline tasks, or pause and reflect. 
 I also write in-depth UX guides, translating complex concepts into clear, actionable learning resources. 
