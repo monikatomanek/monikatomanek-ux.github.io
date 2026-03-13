@@ -140,10 +140,10 @@ h3 a {
 }
 
 h3 a: hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow:
-    0 10px 20px rgba(110,90,160,.18),
-    0 0 26px rgba(170,200,255,.16);
+    0 14px 26px rgba(110,90,160,.20),
+    0 0 40px rgba(170,200,255,.25);
   background: linear-gradient(135deg, #fbeaff, #edf8ff);
 }
 
