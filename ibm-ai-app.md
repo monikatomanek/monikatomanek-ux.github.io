@@ -1,15 +1,44 @@
-# IBM Sustainability AI App
+# IBM Design Challenge - AI & Sustainability
 
-## Problem
-Environmental data is often complex and difficult for users to interpret.
+**Role:** UX Research and Ideation  
+**Tools:** Figma, Sketching, Personas, Design Thinking  
+**Outcome:** AI-based sustainability concept, prototype in Figma  
 
-## Goal
-Design an AI-driven sustainability interface that makes environmental insights intuitive and actionable.
+---
 
-## UX Focus
-- Clear data visualisation
-- Simple interaction flows
-- Meaningful environmental feedback
+## Overview
 
-## Outcome
-A concept showing how AI-powered sustainability tools can deliver insights in a way that users can easily understand and act on.
+Explored how AI can help time-poor, sustainability-aware shoppers make better choices in supermarkets. Focused on reducing cognitive burden, personalising recommendations, and nudging low-impact swaps without adding extra effort.
+
+---
+
+## Research & Insights
+
+- Conducted **empathy mapping** to understand shoppers’ thoughts, feelings, actions, and frustrations
+- Identified pain points: decision fatigue, unclear labelling, budget pressure
+- Synthesised insights to define design opportunities and problem space
+
+---
+
+## Design Solution
+
+**Chosen Concept:** Sustainability Mode - quick, add-on feature inside existing supermarket app
+
+**Workflow**
+
+1. Trigger - Start Shopping → open supermarket app
+2. Activate - Turn on Sustainability Mode (User Control)
+3. Assist - Smart, invisible AI reranks products, flags lower-impact options
+4. Decide - Suggest low-friction swaps in the same price range
+5. Reinforce → basket shows CO₂ impact, repeat smarter next time
+
+🛒 Trigger → 🌿 Activate → ✨ Assist → ⇄ Decide → ↓ Reinforce → 🔁 Repeat
+
+---
+
+## Reflection
+
+- Learned how to integrate AI into the UX design workflow
+- Applied design thinking: empathy → ideation → prototyping → feedback
+- Practised low-friction, behaviour-change design thinking
+- Future improvements: mobile integration, automated preference learning
