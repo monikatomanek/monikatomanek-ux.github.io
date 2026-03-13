@@ -1,4 +1,4 @@
-
+<div class="mouse-glow"></div>
 I’m a UX and Interaction Design student building hands-on experience through projects that combine logic, structure, and creativity.  
 I design apps, create educational materials, and explore ways technology can be both intuitive and meaningful.
 
@@ -17,3 +17,12 @@ User research, stakeholder interviews, and documentation work to update a profes
 
 ### [UX Learning Resources](ux-learning-resources)
 Books and educational materials explaining UX concepts and Figma workflows in clear, actionable ways.
+
+<script>
+const glow = document.querySelector(".mouse-glow");
+
+document.addEventListener("mousemove", e => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
+</script>
