@@ -17,7 +17,8 @@ Explored how AI can help time-poor, sustainability-aware shoppers make better ch
 - Conducted **empathy mapping** to understand shoppers’ thoughts, feelings, actions, and frustrations
 - Identified pain points: decision fatigue, unclear labelling, budget pressure
 - Synthesised insights to define design opportunities and problem space
-![Workflow diagram](sustainability-flow.png)
+
+![Empathy map](empathy.png)
 
 ---
 
