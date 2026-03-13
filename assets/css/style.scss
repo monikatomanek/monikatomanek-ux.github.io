@@ -215,3 +215,26 @@ section img {
     border-radius: 20px;
   }
 }
+
+/* mouse glow */
+
+.mouse-glow {
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(167,139,250,.35) 0%,
+    rgba(96,165,250,.25) 35%,
+    rgba(244,114,182,.18) 60%,
+    transparent 75%
+  );
+
+  filter: blur(45px);
+  transform: translate(-50%, -50%);
+  transition: transform .05s linear;
+}
