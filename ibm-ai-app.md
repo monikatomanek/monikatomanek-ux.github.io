@@ -36,6 +36,8 @@ Explored how AI can help time-poor, sustainability-aware shoppers make better ch
 
 🛒 Trigger → 🌿 Activate → ✨ Assist → ⇄ Decide → ↓ Reinforce → 🔁 Repeat
 
+![Wireframe](wireframe.png)
+
 ---
 
 ## Reflection
